@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026/02/24｜自己紹介＋開発ログ | 女子大生の億ロード</title>
+
+  <!-- CSS（posts配下なので1つ上） -->
+  <link rel="stylesheet" href="../styles.css?v=3" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a class="logo" href="../index.html">
+          <span class="logo-badge"></span>
+          女子大生の億ロード
+        </a>
+        <nav class="nav">
+          <a href="../index.html#latest">最新記事</a>
+          <a href="../index.html#about">プロフィール</a>
+          <a href="../index.html#newsletter">ニュースレター</a>
+        </nav>
+      </div>
+
+      <div class="hero">
+        <span class="kicker">開発ログ / 資産形成</span>
+        <h1>自己紹介＋S&amp;P500スクリーニングを作った日</h1>
+        <div class="meta">公開日：2026-02-24</div>
+        <p>金融×AI（クオンツ志向）の学習・開発・検証を淡々と積み上げる記録。</p>
+        <div class="row mt-12">
+          <a class="btn btn-ghost" href="../index.html">← トップへ戻る</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card">
+
+      <h2 class="section-title">自己紹介</h2>
+      <p>
+        女子大生3年生、電気工学専攻。金融×AIに強く興味があり、将来はクオンツ／金融工学の方向へ進みたいと考えています。
+      </p>
+      <p>
+        このブログ「女子大生の億ロード」では、AI×投資で資産形成を進める過程と、学んだこと・作ったもの・検証結果を記録していきます。
+      </p>
+
+      <h2 class="section-title">今日やったこと</h2>
+      <ul class="list">
+        <li><strong>Webの作成</strong>：GitHub Pagesで公開。記事ページを作って「読む」から遷移できるようにした。</li>
+        <li><strong>S&amp;P500銘柄取得</strong>：分析対象の銘柄リストを取得。</li>
+        <li><strong>価格・出来高取得</strong>：日次データを取得して前処理。</li>
+        <li><strong>指標計算</strong>：リターン・出来高変化などを計算。</li>
+        <li><strong>スコア化→ランキング</strong>：指標をスコアにして総合順位を作成。</li>
+        <li><strong>CSV出力</strong>：ランキング結果をCSVとして保存。</li>
+      </ul>
+
+      <h2 class="section-title">資産ロードマップ整理（現実ベース）</h2>
+      <p>
+        生活水準と必要資産の関係を、現実的な数字で一度整理した。今回は
+        <strong>都内高級マンション（家賃234万/月）</strong>レベルを基準に逆算する。
+      </p>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">① 生活コスト試算</h3>
+        <ul class="list">
+          <li>家賃：234万/月 ≒ 約2,800万/年</li>
+          <li>生活費（保守的）：100万/月 ≒ 1,200万/年</li>
+          <li><strong>合計： 約4,000万/年</strong></li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">②「働かなくても維持」ライン</h3>
+        <p style="margin:0;">
+          4%ルールで逆算：4,000万 ÷ 0.04 ＝ <strong>約10億円</strong><br>
+          → 運用だけでこの生活水準を維持するなら、資産<strong>10億</strong>が目安。
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">③「現役収入で維持」ライン</h3>
+        <p style="margin:0;">
+          税引き後で年4,000万が必要。日本の税負担を考えると、
+          税引き前の目安は <strong>年収8,000万〜1億</strong>あたり。
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">④「余裕」ライン</h3>
+        <p style="margin:0;">
+          支出4,000万に対して余裕を持つなら、<strong>年収2億以上</strong>が一つの目安。
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">⑤ 到達までの現実ルート</h3>
+        <ul class="list">
+          <li>高収益な<strong>事業</strong>（AI×金融など）</li>
+          <li><strong>投資</strong>（資本収入を育てる）</li>
+          <li>信用・人脈（発信/実績）</li>
+        </ul>
+        <p style="margin:0;">※給与だけでの到達は現実的に厳しい前提。</p>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">⑥ 現実的戦略（到達マイルストーン）</h3>
+        <ul class="list">
+          <li><strong>年収1,000万</strong>：投資余力を確保</li>
+          <li><strong>年収3,000万</strong>：資本投入を加速</li>
+          <li><strong>年収1億</strong>：投資主体へ</li>
+          <li><strong>資産5億</strong>：生活選択肢が広がる</li>
+          <li><strong>資産10億</strong>：運用のみで維持が見える</li>
+        </ul>
+      </div>
+
+      <p class="mt-16">
+        これは夢の話ではなく、<strong>数式ベースで整理した現実ライン</strong>。
+        ブログでは、このロードマップに対して「収入・投資・スキル・事業」をどう積むかを記録していく。
+      </p>
+
+      <h2 class="section-title">市場調査で見るところ（メモ）</h2>
+      <div class="card">
+        <h3 style="margin:0 0 6px;">① 売上（Revenue）</h3>
+        <ul class="list">
+          <li>毎年増えている</li>
+          <li>5〜10%成長以上（できれば2桁成長）</li>
+          <li>例：100 → 110 → 125 → 140（良い）</li>
+          <li>例：100 → 98 → 101 → 97（横ばい・減少）</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">② 営業利益（Operating Profit）</h3>
+        <ul class="list">
+          <li>売上より早く伸びている</li>
+          <li>利益率が上がっている</li>
+          <li>例：売上+10%、利益+20%（強い）</li>
+          <li>売上増なのに利益減（危険：コスト増・競争激化）</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">③ 利益率</h3>
+        <ul class="list">
+          <li>営業利益率：10%以上（優秀）</li>
+          <li>20%以上（強い）</li>
+          <li>30%以上（超強い：IT系など）</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">④ PER（株価指標）</h3>
+        <ul class="list">
+          <li>PER 10〜20：普通</li>
+          <li>PER 30以上：成長期待込み</li>
+          <li>PER 50以上：かなり期待</li>
+          <li>※高い＝悪いではない。成長率とセットで見る。</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 6px;">⑤ フリーキャッシュフロー（FCF）</h3>
+        <ul class="list">
+          <li>プラス</li>
+          <li>安定</li>
+          <li>増加傾向</li>
+          <li>現金を生む会社は強い。</li>
+        </ul>
+      </div>
+
+      <h2 class="section-title">今後やること</h2>
+      <ul class="list">
+        <li>Xのアカウント作成</li>
+        <li>noteのアカウント作成</li>
+        <li>市場の調査</li>
+        <li>
+          「なぜこの銘柄？」の理由文を自動出力（超簡単・効果大）<br>
+          例：20日上昇率が高い／出来高が増えてる／52週高値に近い…など
+        </li>
+      </ul>
+
+      <div class="row mt-16">
+        <a class="btn btn-ghost" href="../index.html">← トップへ戻る</a>
+        <a class="btn btn-primary" href="../index.html#latest">最新記事へ</a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    © 女子大生の億ロード
+  </footer>
+</body>
+</html>
